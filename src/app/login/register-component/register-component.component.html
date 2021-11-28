@@ -1,0 +1,49 @@
+<div class="container row text-center">
+    <div class="col"></div>
+    <div class="col">
+        
+        <form ngNativeValidate action="http://localhost:3000/api/user/createuser" method="post">
+            <div class="text-center pt-5 mb-5">
+                <img src="../../../assets/Captura de Pantalla 2021-11-10 a la(s) 6.59.01 p. m..png " width="100"
+                        alt="100">
+                <h1 class="fw-bold "> Create User Gonden</h1>
+                    
+            </div>
+            <div class="d-grid mb-4">
+                <input class="form-control" type="text" placeholder="Nombre Completo" name="name" id="name" required>
+            </div>
+            <div class="d-grid mb-4">
+                <input class="form-control" type="tel" placeholder="Numero telefónico" name="phone" id="phone" required>
+            </div>
+            <div class="d-grid mb-4">
+                <input class="form-control" type="email" placeholder="Email" name="email" id="email" required>
+            </div>
+            <div class="d-grid mb-4">
+                <input class="form-control" type="password" placeholder="password" name="password" id="password" required>
+            </div>
+
+            <!--            <div class="d-grid mb-4">
+                <input class="form-control" type="password" placeholder="confirme password" name="password2" id="password2" required>
+            </div>
+            -->
+
+            <div class="d-grid mb-4">
+                <input class="form-control" type="hidden" name="rol" id="rol" value="admin">
+            </div>
+            <div class=" container mb-4">
+                <div class="d-grid">
+                    <input type="submit" class="btn btn-primary" value="Guardar" name="Guardar"> 
+
+                </div>
+            </div>
+            <div class=" my-3">
+                <span> <a href="/login"> >>>> Login >>>>> </a> </span> <br>
+            </div>
+
+
+        </form>
+    </div>
+    <div class="col"></div>
+
+</div>
+
