@@ -6,3 +6,10 @@ export interface Producto {
 	valorVenta : number
 	cantidad : number
 }
+export interface ProductoRegister {
+	nombre : string
+	codigo : string
+	valorCompra : number
+	valorVenta : number
+	cantidad : number
+}

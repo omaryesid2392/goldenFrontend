@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Producto } from '../modelo/producto'
+import { Producto, ProductoRegister } from '../modelo/producto'
 
 @Injectable({
   providedIn: 'root'
@@ -24,11 +24,14 @@ export class ProductosService {
       return this.http.post(this.URL, producto);  
     }
     else {
-      return this.http.put(this.URL+'actualizarproducto/'+producto._id,  producto);   
+      return this.http.put(this.URL+'updateproducto/'+producto._id,  producto);   
     }
+  }
+  nuevoProducto(producto:ProductoRegister):Observable<any> {
+      return this.http.post(this.URL+'createproducto', producto); 
   }
 
   eliminarProducto(id:string):Observable<any> {
-    return this.http.delete(this.URL+'deleteproducto' + id);
+    return this.http.delete(this.URL+'deleteproducto/' + id);
   }
 }

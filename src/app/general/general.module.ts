@@ -5,6 +5,7 @@ import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { GeneralComponent } from './general/general.component';
 import { ProductosModule } from '../productos/productos.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -19,6 +20,8 @@ import { ProductosModule } from '../productos/productos.module';
   imports: [
     CommonModule,
     ProductosModule,
+    RouterModule
+    
   ],
   exports:[
     GeneralComponent,

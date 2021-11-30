@@ -14,6 +14,7 @@ export class ProductosListadoComponent implements OnInit {
 
   idProductoEliminar:string|null = null
   nombreProductoEliminar:string = ""
+  datoBuscar:string = ""
 
   page:number = 1;
   pageSize:number = 10;
@@ -26,13 +27,33 @@ export class ProductosListadoComponent implements OnInit {
   ngOnInit(): void {  
     this.cargarProductos()
   }
+  buscarProductos(clean:boolean):void {
+    if (clean) {
+      this.datoBuscar = ""
+    }
+    this.cargarProductos2()
+  }
 
-  cargarProductos() {
+  cargarProductos():void {
     this.productosSvc.getProductos().subscribe(data=>{
       console.log(data)
       this.productos = data
     })
     this.collectionSize = this.productos.length
+  }
+  cargarProductos2():void {
+    console.log(this.datoBuscar)
+    this.productosSvc.getProductos().subscribe(data=>{
+      const listaTemp:Producto[] = data
+      const dbusc = this.cambiarMinusculasyTildes(this.datoBuscar)
+      this.productos = listaTemp.filter(prod=>this.cambiarMinusculasyTildes(prod.nombre+" "+prod.codigo+" "+prod.cantidad).includes(dbusc))
+    },
+    err=>{console.log(err)}
+    )
+    this.collectionSize = this.productos.length
+  }
+  cambiarMinusculasyTildes(textoCambiar:string):string {
+    return textoCambiar.toLowerCase().replace('á','a').replace('é','e').replace('í','i').replace('ó','o').replace('ú','u');
   }
   
   setProductoEliminar(id:string|null, nombre:string) {

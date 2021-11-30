@@ -1,21 +1,31 @@
-<div class="bg-white" style="width: 280px;">
-	<ul class="list-unstyled">
-		<li class="mb-1">
-			<button class="btn btn-toggle rounded collapsed" data-bs-toggle="collapse"
-				data-bs-target="#productos-collapse" aria-expanded="true">
-				Productos
-			</button>
-			<div class="collapse show" id="productos-collapse">
-				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-					<li><a href="productos" class="link-dark rounded" 
-							>Listado</a></li>
-					<li><a href="productos/registro" class="link-dark rounded" r
-							>Añadir</a></li>
+<div class="container mt-2">
 
-				</ul>
-			</div>
-		</li>
-	</ul>
+	<div class="col-lg-10">
+		<div class="card">
+			<div class="card-body">
+
+				<div class="bg-white">
+					<ul class="list-unstyled">
+						<li class="mb-1">
+							<h5><span>Productos</span></h5>
+							<!--
+							<button class="btn btn-toggle rounded collapsed" data-bs-toggle="collapse"
+								data-bs-target="#productos-collapse" aria-expanded="true">
+								Productos
+							</button>
+							-->
+							<div class="collapse show" id="productos-collapse">
+								<ul class="list-group list-group-flush">
+									<li><a routerLink="productos" class="link-dark rounded">Listar</a></li>
+									<li><a routerLink="productos/nuevo" class="link-dark rounded">Nuevo</a></li>
+
+								</ul>
+							</div>
+
+						</li>
+
+					</ul>
+					<!--
 	<ul class="list-unstyled">
 		<li class="mb-1">
 			<button class="btn btn-toggle rounded collapsed" data-bs-toggle="collapse"
@@ -24,10 +34,17 @@
 			</button>
 			<div class="collapse show" id="clientes-collapse">
 				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-					<li><a routerLink="/clientes" class="link-dark rounded">Listado</a></li>
-					<li><a routerLink="/clientes/registro" class="link-dark rounded">Añadir</a></li>
+					<li><a routerLink="/productos" class="link-dark rounded">Listado</a></li>
+					<li><a routerLink="/productos/registro" class="link-dark rounded">Añadir</a></li>
 				</ul>
 			</div>
+
 		</li>
 	</ul>
+	-->
+				</div>
+			</div>
+		</div>
+	</div>
+
 </div>

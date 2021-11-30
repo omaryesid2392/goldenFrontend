@@ -6,16 +6,18 @@ import { RegisterComponentComponent } from './login/register-component/register-
 import { GeneralComponent } from './general/general/general.component';
 import { ProductosListadoComponent } from './productos/listado/listado.component';
 import { ProductosRegistroComponent } from './productos/registro/registro.component';
+import { NuevoComponent } from './productos/nuevo/nuevo.component';
 
 
 
 const routes: Routes = [
-  {path : "", redirectTo :"/login", pathMatch : 'full'},
+  {path : "", redirectTo :"/general", pathMatch : 'full'},
   {path:"login",component: LoginComponentComponent},
   {path:"register",component: RegisterComponentComponent},
-  {path:"general",component: GeneralComponent},
+  {path:"general",component: ProductosListadoComponent},
   {path:"productos",component: ProductosListadoComponent},
   {path:"productos/registro/:id",component: ProductosRegistroComponent},
+  {path:"productos/nuevo",component: NuevoComponent},
 ];
 
 @NgModule({
